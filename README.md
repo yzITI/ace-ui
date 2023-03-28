@@ -5,5 +5,5 @@ A UI Library for Svelte
 ## Get Started
 
 ```
-npm i @yziti/ace-ui
+npm i ace-svelte
 ```
