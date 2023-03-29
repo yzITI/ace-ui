@@ -1,5 +1,8 @@
+<!-- AButton
+  className: a-shadow, a-round, a-border
+  events: click, dblclick
+-->
 <script>
-  // supported className: 'a-shadow', 'a-round', 'a-border'
   export let className = ''
   export let style = ''
   export let title = ''
@@ -7,7 +10,7 @@
   export let background = '#eee'
 </script>
 
-<button title={title} style:color style:background style:border-color={color} class={className} style={style}>
+<button on:click on:dblclick title={title} style:color style:background style:border-color={color} class={className} style={style}>
   <slot></slot>
 </button>
 
