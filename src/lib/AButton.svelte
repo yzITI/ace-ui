@@ -20,8 +20,6 @@
     border: none;
     padding: 0.25rem 0.5rem;
     transition: box-shadow 0.3s ease;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
   button:hover {
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
