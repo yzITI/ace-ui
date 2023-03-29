@@ -1,5 +1,8 @@
+<!-- AButton
+  className: a-shadow, a-round, a-border
+  events: click, dblclick
+-->
 <script>
-  // supported className: 'a-shadow', 'a-round', 'a-border'
   export let className = ''
   export let style = ''
   export let title = ''
@@ -7,7 +10,7 @@
   export let background = '#eee'
 </script>
 
-<button title={title} style:color style:background style:border-color={color} class={className} style={style}>
+<button on:click on:dblclick title={title} style:color style:background style:border-color={color} class={className} style={style}>
   <slot></slot>
 </button>
 
@@ -33,7 +36,7 @@
   button.a-shadow {
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
-  button.a-shadow:hover {
+  button.a-shadow:hover { /* bigger shadow */
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   }
   button.a-border {

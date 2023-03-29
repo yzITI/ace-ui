@@ -2,4 +2,4 @@
   import AButton from './AButton.svelte'
 </script>
 
-<AButton>AceButton</AButton>
+<AButton on:click on:dblclick>AceButton</AButton>
