@@ -1,12 +1,12 @@
 <script>
-  // export let class = '' // $$props.class
+  export let className = ''
   export let style = ''
   export let title = ''
   export let color = 'black'
   export let background = '#eee'
 </script>
 
-<button title={title} style:color style:background style:border-color={color} class={$$props.class} style={style}>
+<button title={title} style:color style:background style:border-color={color} class={className} style={style}>
   <slot></slot>
 </button>
 
