@@ -6,7 +6,7 @@
   export let background = '#eee'
 </script>
 
-<button style:color style:background style:border-color={color} class={$$props.class} style={style}>
+<button title={title} style:color style:background style:border-color={color} class={$$props.class} style={style}>
   <slot></slot>
 </button>
 
