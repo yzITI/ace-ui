@@ -1,7 +1,5 @@
 <script>
-  import AButton from '$lib/AButton.svelte'
-  import AceButton from '$lib/AceButton.svelte'
-  import AModal from '$lib/AModal.svelte'
+  import { AButton, AModal, AceButton } from '$lib'
   let show = false
 </script>
 

@@ -5,6 +5,7 @@
   export let show = false // binding
   export let className = ''
   export let style = ''
+  export let disable = false
   export let background = 'rgba(0, 0, 0, 0.6)'
   export let duration = 300
 
@@ -17,11 +18,14 @@
     if (className.match('a-top')) flyConfig = { y: '-100%' }
     if (className.match('a-bottom')) flyConfig = { y: '100%' }
   }
+  function close () {
+    if (!disable) show = false
+  }
 </script>
 
 {#if show}
   <div class={'a-modal-outer ' + className} style={style}>
-    <div transition:fade={{ duration, easing: cubicOut }} class="a-modal-bg" style:background on:click={() => show = false} on:keyup={() => {}} />
+    <div transition:fade={{ duration, easing: cubicOut }} class="a-modal-bg" style:background on:click={close} on:keyup={() => {}} />
     <div transition:fly={{ duration, ...flyConfig }} class="a-modal-inner">
       <slot></slot>
     </div>
