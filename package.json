@@ -12,6 +12,18 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
+		},
+		"./A": {
+			"types": "./dist/A/index.d.ts",
+			"svelte": "./dist/A/index.js"
+		},
+		"./Ace": {
+			"types": "./dist/Ace/index.d.ts",
+			"svelte": "./dist/Ace/index.js"
+		},
+		"./utils": {
+			"types": "./dist/utils/index.d.ts",
+			"svelte": "./dist/utils/index.js"
 		}
 	},
 	"files": [

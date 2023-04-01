@@ -1,5 +1,6 @@
 <!-- AModal
   className: a-absolute a-left a-right a-top a-bottom
+  slot: default
 -->
 <script>
   export let show = false // binding

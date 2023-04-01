@@ -1,6 +1,7 @@
 <!-- AButton
   className: a-shadow, a-round, a-border
   events: click, dblclick
+  slot: default
 -->
 <script>
   export let className = ''
