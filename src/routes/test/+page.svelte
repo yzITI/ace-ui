@@ -1,7 +1,8 @@
 <script>
-  import { AButton, AModal, ATooltip, AceButton } from '$lib'
+  import { AButton, AModal, ATooltip, ASwitch, AceButton } from '$lib'
   let showModal = false
   let showTooltip = false
+  let switchValue = false
 </script>
 
 <div style="display: flex; align-items: center; padding: 2rem; background: #fff;">
@@ -25,3 +26,5 @@
     </div>
   </AModal>
 </div>
+
+<ASwitch bind:value={switchValue}></ASwitch>
