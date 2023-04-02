@@ -1,6 +1,6 @@
 <!-- AButton
   className: a-shadow, a-round, a-border
-  events: click, dblclick
+  events: click, dblclick, mouseenter, mouseleave
   slot: default
 -->
 <script>
@@ -11,7 +11,7 @@
   export let background = '#eee'
 </script>
 
-<button on:click on:dblclick title={title} style:color style:background style:border-color={color} class={className} style={style}>
+<button on:click on:dblclick on:mouseenter on:mouseleave title={title} style:color style:background style:border-color={color} class={className} style={style}>
   <slot></slot>
 </button>
 
