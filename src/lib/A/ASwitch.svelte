@@ -9,7 +9,7 @@
 </script>
 
 <div class="a-switch-outer" style:width={`calc(2 * ${size})`} on:click={() => value = !value} style:padding={`calc(${size} / 10)`} style:background={value ? activeColor : inactiveColor}>
-  <div class="a-switch-inner" style:border-width={`calc(${size} / 12)`} style:left={value ? '50%' : '0%'} style:width={size} style:height={size} class={className} style={style}></div>
+  <div style:border-width={`calc(${size} / 12)`} style:left={value ? '50%' : '0%'} style:width={size} style:height={size} class={'a-switch-inner ' + className} style={style}></div>
 </div>
 
 <style>
