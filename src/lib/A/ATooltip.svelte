@@ -18,7 +18,7 @@
   }
 </script>
 
-<div class={'a-tooltip-outer ' + className} style={style}>
+<div class={'a-tooltip-outer ' + className} {style}>
   {#if show}
     <div transition:fly={{ duration, ...flyConfig }} class="a-tooltip-tooltip">
       <slot name="tooltip"></slot>

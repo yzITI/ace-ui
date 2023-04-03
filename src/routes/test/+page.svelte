@@ -1,5 +1,6 @@
 <script>
-  import { AButton, AModal, ATooltip, ASwitch, AceButton } from '$lib'
+  import { AButton, AIcon, AModal, ATooltip, ASwitch } from '$lib'
+  import { mdiAbTesting } from '@mdi/js'
   let showModal = false
   let showTooltip = false
   let switchValue = false
@@ -28,3 +29,5 @@
 </div>
 
 <ASwitch bind:value={switchValue}></ASwitch>
+
+<AIcon path={mdiAbTesting} size="3rem" color="red" on:click={() => console.log('click!')}></AIcon>

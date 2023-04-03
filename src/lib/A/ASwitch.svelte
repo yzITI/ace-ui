@@ -1,4 +1,6 @@
-<!-- ASwitch -->
+<!-- ASwitch
+  events: ALL
+-->
 <script>
   export let value = false // binding
   export let size = '1.5rem'
@@ -10,14 +12,20 @@
   function toggle () {
     value = !value
   }
+
+  // forward all events
+  import { get_current_component } from 'svelte/internal'
+  import forwardBuilder from '../utils/forwardBuilder.js'
+  const forward = forwardBuilder(get_current_component())
 </script>
 
-<div class="a-switch-outer" style:width={`calc(2 * ${size})`} on:click={toggle} on:keyup={toggle} style:padding={`calc(${size} / 10)`} style:background={value ? activeColor : inactiveColor}>
-  <div style:border-width={`calc(${size} / 12)`} style:left={value ? '50%' : '0%'} style:width={size} style:height={size} class={'a-switch-inner ' + className} style={style}></div>
+<div use:forward class="a-switch-outer" style:width={`calc(2 * ${size})`} on:click={toggle} on:keyup={toggle} style:padding={`calc(${size} / 10)`} style:background={value ? activeColor : inactiveColor}>
+  <div style:border-width={`calc(${size} / 12)`} style:left={value ? '50%' : '0%'} style:width={size} style:height={size} {style} class={'a-switch-inner ' + className}></div>
 </div>
 
 <style>
   div.a-switch-outer {
+    display: inline-block;
     outline: none;
     border-radius: 9999px;
     cursor: pointer;

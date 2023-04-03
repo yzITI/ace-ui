@@ -25,7 +25,7 @@
 </script>
 
 {#if show}
-  <div class={'a-modal-outer ' + className} style={style}>
+  <div class={'a-modal-outer ' + className} {style}>
     <div transition:fade={{ duration, easing: cubicOut }} class="a-modal-bg" style:background on:click={close} on:keyup={() => {}} />
     <div transition:fly={{ duration, ...flyConfig }} class="a-modal-inner">
       <slot></slot>
