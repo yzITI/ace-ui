@@ -1,19 +1,19 @@
 <script>
-  import { AButton, AIcon, AModal, ATooltip, ASwitch } from '$lib'
+  import { AButton, AIcon, AModal, AAttach, ASwitch } from '$lib'
   import { mdiAbTesting } from '@mdi/js'
   let showModal = false
-  let showTooltip = false
+  let showAttach = false
   let switchValue = false
 </script>
 
 <div style="display: flex; align-items: center; padding: 2rem; background: #fff;">
   <AButton style="margin: 1rem;" title="hi!" on:click={() => showModal = !showModal}>Toggle Modal</AButton>
-  <ATooltip show={showTooltip} style="margin: 1rem;" className="a-below">
-    <AButton slot="target" className="a-round a-shadow" on:mouseenter={() => showTooltip = true} on:mouseleave={() => showTooltip = false}>Toggle Tooltip</AButton>
-    <div slot="tooltip" style="background: gray; color: white; border-radius: 5px; margin: 0.25rem; padding: 0.125rem 0.25rem; font-size: 0.8rem;">
-      tooltip!
+  <AAttach show={showAttach} style="margin: 1rem;" className="a-left-top">
+    <AButton slot="target" className="a-round a-shadow" on:click={() => showAttach = !showAttach}>Toggle attach</AButton>
+    <div slot="attach" style="background: gray; color: white; border-radius: 5px; margin: 0.25rem; padding: 0.125rem 0.25rem; font-size: 0.8rem;">
+      attach!
     </div>
-  </ATooltip>
+  </AAttach>
   <AButton style="margin: 1rem;" className="a-border" color="#00f" background="#eef">border button</AButton>
 </div>
 
