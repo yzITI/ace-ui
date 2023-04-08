@@ -22,9 +22,6 @@
 
 <style>
   button {
-    display: inline-flex;
-    align-items: center;
-    justify-items: center;
     cursor: pointer;
     border-radius: 0.25rem;
     border: none;

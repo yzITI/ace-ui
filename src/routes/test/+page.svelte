@@ -1,5 +1,5 @@
 <script>
-  import { AButton, AIcon, AModal, AAttach, ASwitch } from '$lib'
+  import { AButton, AFlex, AIcon, AModal, AAttach, ASwitch } from '$lib'
   import { mdiAbTesting } from '@mdi/js'
   let showModal = false
   let showAttach = false
@@ -30,4 +30,10 @@
 
 <ASwitch bind:value={switchValue}></ASwitch>
 
-<AIcon path={mdiAbTesting} size="3rem" color="red" on:click={() => console.log('click!')}></AIcon>
+<AButton>
+  <AFlex>
+    <AIcon path={mdiAbTesting} size="1rem" color="red"></AIcon>
+    <div>HAHAHAH</div>
+  </AFlex>
+</AButton>
+

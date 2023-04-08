@@ -54,12 +54,12 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.15.0",
+		"@sveltejs/kit": "^1.15.2",
 		"@sveltejs/package": "^2.0.2",
 		"publint": "^0.1.11",
 		"svelte": "^3.58.0",
 		"tslib": "^2.5.0",
-		"typescript": "^5.0.3",
+		"typescript": "^5.0.4",
 		"vite": "^4.2.1"
 	}
 }
