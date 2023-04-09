@@ -5,16 +5,18 @@
 
 </script>
 <AFlex className="a-items-center a-justify-center a-col" style="min-height: 90vh;">
-  <img src={logo} alt="logo">
+  <object data={logo} type="image/svg+xml"></object>
   <h1>Ace UI</h1>
   <p class="description">A Progressive UI Library for Svelte</p>
-  <AFlex className="a-items-center">
-    <AButton style="margin: 1rem; font-size: 1.5rem;">Get Started</AButton>
+  <AFlex className="a-items-center a-justify-center a-wrap">
+    <a href="/doc">
+      <AButton style="padding: 0.7rem; width: 16rem; font-size: 1.7rem; font-weight: 600;" background="#3B82F6" color="white">Get Started</AButton>
+    </a>
     <a target="_blank" href="https://github.com/yziti/ace-ui">
-      <AButton style="font-size: 1.5rem;">
-        <AFlex className="a-items-center">
-          <AIcon path={mdiGithub} size="1.5rem"/>
-          <div style="margin-left: 5px;" >Github</div>
+      <AButton style="padding: 0.7rem; width: 16rem; font-weight: 600;" background="#333">
+        <AFlex className="a-items-center a-justify-center">
+          <AIcon path={mdiGithub} size="2rem" color="white" />
+          <div style="margin-left: 0.5rem; color: white; font-size: 1.7rem;">Github</div>
         </AFlex>
       </AButton>
     </a>
@@ -25,27 +27,32 @@
   * {
     color: #333;
     font-family: sans-serif;
-    margin: 0; 
+    margin: 0;
+    user-select: none;
   }
   h1 {
     font-size: 5rem;
     font-weight: 400;
   }
   p.description {
-    margin: 2rem 0;
-    font-size: 2rem;
+    margin: 0.5rem 0 2rem;
+    font-size: 1.5rem;
     color: #999;
   }
-  img {
-    max-width: 80%;
+  object {
+    width: 400px;
+    max-width: 70%;
+    margin: -1rem 0;
   }
-
+  a {
+    margin: 1rem;
+  }
   @media (max-width: 640px) {
     h1 {
       font-size: 4rem;
     }
     p.description {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
   }
 </style>
