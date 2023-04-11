@@ -2,10 +2,10 @@
   import logo from '$assets/logo.svg'
   import { AButton, AFlex, AIcon } from '$lib'
   import { mdiGithub } from '@mdi/js'
-
 </script>
+
 <AFlex className="a-items-center a-justify-center a-col" style="min-height: 90vh;">
-  <object data={logo} type="image/svg+xml"></object>
+  <img src={logo} alt="logo" type="image/svg+xml">
   <h1>Ace UI</h1>
   <p class="description">A Progressive UI Library for Svelte</p>
   <AFlex className="a-items-center a-justify-center a-wrap">
@@ -39,7 +39,7 @@
     font-size: 1.5rem;
     color: #999;
   }
-  object {
+  img {
     width: 400px;
     max-width: 70%;
     margin: -1rem 0;
