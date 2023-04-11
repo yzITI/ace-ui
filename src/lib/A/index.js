@@ -1,5 +1,6 @@
 export { default as AAttach } from './AAttach.svelte'
 export { default as AButton } from './AButton.svelte'
+export { default as ACheckbox } from './ACheckbox.svelte'
 export { default as AFlex } from './AFlex.svelte'
 export { default as AIcon } from './AIcon.svelte'
 export { default as AModal } from './AModal.svelte'

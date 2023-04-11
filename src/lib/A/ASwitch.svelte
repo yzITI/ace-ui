@@ -20,7 +20,7 @@
 </script>
 
 <div use:forward class="a-switch-outer" style:width={`calc(2 * ${size})`} on:click={toggle} on:keyup={toggle} style:padding={`calc(${size} / 10)`} style:background={value ? activeColor : inactiveColor}>
-  <div style:border-width={`calc(${size} / 12)`} style:left={value ? '50%' : '0%'} style:width={size} style:height={size} {style} class={'a-switch-inner ' + className}></div>
+  <div style:left={value ? '50%' : '0%'} style:width={size} style:height={size} {style} class={'a-switch-inner ' + className}></div>
 </div>
 
 <style>
@@ -30,6 +30,7 @@
     border-radius: 9999px;
     cursor: pointer;
     transition: background 0.3s ease;
+    user-select: none;
   }
   div.a-switch-inner {
     outline: none;
@@ -37,7 +38,6 @@
     border-radius: 9999px;
     transition: left 0.3s ease;
     background: white;
-    border: #ddd solid;
     box-sizing: border-box;
   }
 </style>
