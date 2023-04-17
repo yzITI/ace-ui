@@ -1,5 +1,6 @@
 <script>
   import { AButton, AFlex, AIcon, AModal, AAttach, ASwitch, ACheckbox } from '$lib'
+  import { AceButton } from '$lib'
   import { mdiAbTesting } from '@mdi/js'
   let showModal = false
   let showAttach = false
@@ -38,3 +39,6 @@
   </AFlex>
 </AButton>
 
+<div style="display: flex; align-items: center; padding: 2rem; background: #fff;">
+  <AceButton>默认按钮</AceButton>
+</div>
