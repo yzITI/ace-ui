@@ -1,4 +1,6 @@
 import { writable } from 'svelte/store'
 
-export const primary = writable('')
-export const secondary = writable('')
+export const color = writable({
+  primary: '',
+  secondary: ''
+})
