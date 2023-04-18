@@ -1,10 +1,12 @@
 <script>
   // import AButton from '../A/AButton.svelte'
+
+  export let type = ''
 </script>
 
 <!-- <AButton on:click on:dblclick>AceButton</AButton> -->
 
-<button>
+<button class={type}>
   <slot></slot>
 </button>
 
@@ -30,5 +32,40 @@
   button:focus {
     outline: -webkit-focus-ring-color auto 5px;
     outline-offset: -2px;
+  }
+  button.primary {
+    background-color: #428BCA;
+    border-color: #428BCA;
+  }
+  button.primary:hover {
+    background-color: #1B6AAA;
+  }
+  button.info {
+    background-color: #6FB3E0;
+    border-color: #6FB3E0;
+  }
+  button.info:hover {
+    background-color: #4F99C6;
+  }
+  button.success {
+    background-color: #87B87F;
+    border-color: #87B87F;
+  }
+  button.success:hover {
+    background-color: #629B58;
+  }
+  button.warning {
+    background-color: #FFB752;
+    border-color: #FFB752;
+  }
+  button.warning:hover {
+    background-color: #E59729;
+  }
+  button.danger {
+    background-color: #D15B47;
+    border-color: #D15B47;
+  }
+  button.danger:hover {
+    background-color: #B74635;
   }
 </style>

@@ -41,4 +41,9 @@
 
 <div style="display: flex; align-items: center; padding: 2rem; background: #fff;">
   <AceButton>默认按钮</AceButton>
+  <AceButton type="primary">主要按钮</AceButton>
+  <AceButton type="info">信息按钮</AceButton>
+  <AceButton type="success">成功按钮</AceButton>
+  <AceButton type="warning">警告按钮</AceButton>
+  <AceButton type="danger">危险按钮</AceButton>
 </div>
