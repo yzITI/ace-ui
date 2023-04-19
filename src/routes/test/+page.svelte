@@ -1,5 +1,5 @@
 <script>
-  import { AButton, AFlex, AIcon, AModal, AAttach, ASwitch, ACheckbox } from '$lib'
+  import { AButton, AExpand, AFlex, AIcon, AModal, AAttach, ASwitch, ACheckbox } from '$lib'
   import { mdiAbTesting } from '@mdi/js'
   let showModal = false
   let showAttach = false
@@ -28,8 +28,10 @@
   </AModal>
 </div>
 
-<ASwitch bind:value={switchValue}></ASwitch>
-<ACheckbox bind:value={switchValue}></ACheckbox>
+<AExpand show={showModal}>
+  <ASwitch bind:value={switchValue}></ASwitch>
+  <ACheckbox bind:value={switchValue}></ACheckbox>
+</AExpand>
 
 <AButton>
   <AFlex>
