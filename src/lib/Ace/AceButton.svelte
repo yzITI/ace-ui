@@ -68,4 +68,50 @@
   button.danger:hover {
     background-color: #B74635;
   }
+  button.inverse {
+    background-color: #555;
+    border-color: #555;
+  }
+  button.inverse:hover {
+    background-color: #303030;
+  }
+  button.pink {
+    background-color: #D6487E;
+    border-color: #D6487E;
+  }
+  button.pink:hover {
+    background-color: #B73766;
+  }
+  button.purple {
+    background-color: #9585BF;
+    border-color: #9585BF;
+  }
+  button.purple:hover {
+    background-color: #7461AA;
+  }
+  button.yellow {
+    background-color: #FEE188;
+    border-color: #FEE188;
+    color: #963;
+    text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.4);
+  }
+  button.yellow:hover {
+    background-color: #F7D05B;
+  }
+  button.grey {
+    background-color: #A0A0A0;
+    border-color: #A0A0A0;
+  }
+  button.grey:hover {
+    background-color: #888;
+  }
+  button.light {
+    background-color: #E7E7E7;
+    border-color: #E7E7E7;
+    color: #888;
+    text-shadow: 0 -1px 0 rgba(250, 250, 250, 0.25);
+  }
+  button.light:hover {
+    background-color: #D9D9D9;
+  }
 </style>

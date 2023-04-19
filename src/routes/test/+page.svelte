@@ -39,11 +39,19 @@
   </AFlex>
 </AButton>
 
-<div style="display: flex; align-items: center; padding: 2rem; background: #fff;">
+<div style="padding: 1rem 2rem;">
   <AceButton>默认按钮</AceButton>
   <AceButton type="primary">主要按钮</AceButton>
   <AceButton type="info">信息按钮</AceButton>
   <AceButton type="success">成功按钮</AceButton>
   <AceButton type="warning">警告按钮</AceButton>
   <AceButton type="danger">危险按钮</AceButton>
+</div>
+<div style="padding: 1rem 2rem;">
+  <AceButton type="inverse">Inverse</AceButton>
+  <AceButton type="pink">Pink</AceButton>
+  <AceButton type="purple">Purple</AceButton>
+  <AceButton type="yellow">Yellow</AceButton>
+  <AceButton type="grey">Grey</AceButton>
+  <AceButton type="light">Light</AceButton>
 </div>
