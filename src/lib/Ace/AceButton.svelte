@@ -114,4 +114,19 @@
   button.light:hover {
     background-color: #D9D9D9;
   }
+  button.link {
+    background: 0 0;
+    color: #08C;
+    padding: 4px 12px;
+    line-height: 20px;
+    border-width: 0;
+    text-shadow: none;
+  }
+  button.link:hover {
+    text-decoration: underline;
+  }
+  button.link:active, button.link:focus {
+    text-decoration: underline;
+    color: #009ceb;
+  }
 </style>

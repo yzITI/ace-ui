@@ -55,3 +55,6 @@
   <AceButton type="grey">Grey</AceButton>
   <AceButton type="light">Light</AceButton>
 </div>
+<div style="padding: 1rem 2rem;">
+  <AceButton type="link">文字链接按钮</AceButton>
+</div>
