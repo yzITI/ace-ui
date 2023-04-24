@@ -58,3 +58,17 @@
 <div style="padding: 1rem 2rem;">
   <AceButton type="link">文字链接按钮</AceButton>
 </div>
+<div style="padding: 1rem 2rem;">
+  <AceButton type="yellow" size="minier">Minier</AceButton>
+  <AceButton size="mini">Mini</AceButton>
+  <AceButton type="primary" size="small">Small</AceButton>
+  <AceButton type="info">Default</AceButton>
+  <AceButton type="success" size="large">Large</AceButton>
+</div>
+<div style="padding: 1rem 2rem;">
+  <AceButton type="warning" size="large">Large</AceButton>
+  <AceButton type="danger">Default</AceButton>
+  <AceButton type="inverse" size="small">Small</AceButton>
+  <AceButton type="pink" size="mini">Mini</AceButton>
+  <AceButton type="purple" size="minier">Minier</AceButton>
+</div>

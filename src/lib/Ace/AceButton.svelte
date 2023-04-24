@@ -2,11 +2,12 @@
   // import AButton from '../A/AButton.svelte'
 
   export let type = ''
+  export let size = ''
 </script>
 
 <!-- <AButton on:click on:dblclick>AceButton</AButton> -->
 
-<button class={type}>
+<button class={type + ' ' + size}>
   <slot></slot>
 </button>
 
@@ -128,5 +129,29 @@
   button.link:active, button.link:focus {
     text-decoration: underline;
     color: #009ceb;
+  }
+  button.large {
+    border-width: 5px;
+    padding: 7px 16px;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+  button.small {
+    border-width: 4px;
+    padding: 4px 9px;
+    font-size: 13px;
+    line-height: 1.38;
+  }
+  button.mini {
+    border-width: 3px;
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  button.minier {
+    border-width: 2px;
+    padding: 0 4px;
+    font-size: 12px;
+    line-height: 18px;
   }
 </style>
