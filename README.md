@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://ace-ui.pages.dev/" target="_blank">
-    <img alt="Ace UI Logo" width="200" src="https://ace-ui.pages.dev/logo.svg">
+  <a href="https://ace-ui.yzzx.tech/" target="_blank">
+    <img alt="Ace UI Logo" width="200" src="https://ace-ui.yzzx.tech/logo.svg">
   </a>
 </p>
 
