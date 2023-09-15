@@ -31,8 +31,7 @@ Import components to use!
 import { AIcon, AceButton } from 'ace.svelte'
 ```
 
-## Dependencies
+## Peer Dependencies
 
-Automatically installed.
-
-- `@mdi/js`: [Material Design Icons](https://pictogrammers.com/library/mdi/) with 7000+ icons!
+- `svelte@4.x`
+- `@mdi/js@7.x`: SVG paths for [Material Design Icons](https://pictogrammers.com/library/mdi/) with 7000+ icons!
