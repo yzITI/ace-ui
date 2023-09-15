@@ -19,7 +19,7 @@
   const forward = forwardBuilder(get_current_component())
 </script>
 
-<div use:forward class="a-switch-outer" style:width={`calc(2 * ${size})`} on:click={toggle} on:keyup={toggle} style:padding={`calc(${size} / 10)`} style:background={value ? activeColor : inactiveColor}>
+<div use:forward class="a-switch-outer" style:width={`calc(2 * ${size})`} on:click={toggle} on:keyup={toggle} style:padding={`calc(${size} / 10)`} style:background={value ? activeColor : inactiveColor} role="checkbox" tabindex="0" aria-checked={value}>
   <div style:left={value ? '50%' : '0%'} style:width={size} style:height={size} {style} class={'a-switch-inner ' + className}></div>
 </div>
 

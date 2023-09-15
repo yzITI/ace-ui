@@ -21,10 +21,18 @@
 
 ## Get Started
 
+Install via package manager
 ```
 npm i ace.svelte
 ```
 
+Import components to use!
+```js
+import { AIcon, AceButton } from 'ace.svelte'
+```
+
 ## Dependencies
+
+Automatically installed.
 
 - `@mdi/js`: [Material Design Icons](https://pictogrammers.com/library/mdi/) with 7000+ icons!
