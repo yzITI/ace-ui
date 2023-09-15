@@ -31,6 +31,7 @@
     cursor: pointer;
     transition: background 0.3s ease;
     user-select: none;
+    box-sizing: content-box;
   }
   div.a-switch-inner {
     outline: none;
