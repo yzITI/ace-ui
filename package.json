@@ -1,6 +1,6 @@
 {
   "name": "ace.svelte",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
@@ -57,6 +57,7 @@
     "@sveltejs/package": "^2.2.2",
     "publint": "^0.2.2",
     "svelte": "^4.2.0",
+    "svelte-preprocess-delegate-events": "^0.4.2",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
     "vite": "^4.4.9"

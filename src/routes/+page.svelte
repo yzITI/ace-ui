@@ -9,7 +9,7 @@
   <h1>Ace UI</h1>
   <p class="description">A Progressive UI Library for Svelte</p>
   <AFlex className="a-items-center a-justify-center a-wrap">
-    <a href="/doc">
+    <a href="/docs">
       <AButton style="padding: 0.7rem; width: 16rem; font-size: 1.7rem; font-weight: 600;" background="#3B82F6" color="white">Get Started</AButton>
     </a>
     <a target="_blank" href="https://github.com/yziti/ace-ui">

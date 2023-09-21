@@ -14,14 +14,9 @@
   function toggle () {
     value = !value
   }
-
-  // forward all events
-  import { get_current_component } from 'svelte/internal'
-  import forwardBuilder from '../utils/forwardBuilder.js'
-  const forward = forwardBuilder(get_current_component())
 </script>
 
-<div use:forward class={'a-checkbox ' + className} on:click={toggle} on:keyup={toggle} role="checkbox" aria-checked={value} tabindex="0">
+<div on:* class={'a-checkbox ' + className} on:click={toggle} on:keyup={toggle} role="checkbox" aria-checked={value} tabindex="0">
   <div class="check" style:opacity={value ? 100 : 0}>
     <AIcon path={mdiCheckboxMarked} color={activeColor} {size} />
   </div>

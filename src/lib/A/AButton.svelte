@@ -9,14 +9,9 @@
   export let title = ''
   export let color = 'black'
   export let background = '#eee'
-
-  // forward all events
-  import { get_current_component } from 'svelte/internal'
-  import forwardBuilder from '../utils/forwardBuilder.js'
-  const forward = forwardBuilder(get_current_component())
 </script>
 
-<button use:forward {title} style:color style:background style:border-color={color} class={className} {style}>
+<button on:* {title} style:color style:background style:border-color={color} class={className} {style}>
   <slot></slot>
 </button>
 

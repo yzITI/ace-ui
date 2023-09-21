@@ -32,6 +32,7 @@
 <style>
   div.a-attach-outer {
     position: relative;
+    display: inline-block;
   }
   div.a-attach-attach {
     position: absolute;
