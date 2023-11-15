@@ -1,6 +1,6 @@
 {
   "name": "ace.svelte",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
@@ -46,20 +46,23 @@
   ],
   "author": "yzITI",
   "license": "MIT",
+  "dependencies": {
+    "svelte-preprocess-delegate-events": "^0.4.2"
+  },
   "peerDependencies": {
     "@mdi/js": "7.x",
     "svelte": "4.x"
   },
   "devDependencies": {
-    "@mdi/js": "^7.2.96",
-    "@sveltejs/adapter-auto": "^2.1.0",
-    "@sveltejs/kit": "^1.25.0",
+    "@mdi/js": "^7.3.67",
+    "@sveltejs/adapter-auto": "^2.1.1",
+    "@sveltejs/kit": "^1.27.6",
     "@sveltejs/package": "^2.2.2",
-    "publint": "^0.2.2",
-    "svelte": "^4.2.0",
+    "publint": "^0.2.5",
+    "svelte": "^4.2.3",
     "svelte-preprocess-delegate-events": "^0.4.2",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+    "vite": "^4.5.0"
   }
 }
