@@ -3,32 +3,23 @@
   events: change
 -->
 <script>
-  export let className = ''
-  export let style = ''
-  export let multiple = false
-  export let accept = ''
-  export let files 
+  let { multiple = false, accept = '', files, change, ...props } = $props()
 
-  import { createEventDispatcher } from 'svelte'
-  
-  const dispatch = createEventDispatcher()
-
-  let fileInput = null
+  let fileInput = $state({})
 
   const click = () => { fileInput?.click() }
   const drop = e => {
+    e.preventDefault()
     if (!multiple && e.dataTransfer.files.length > 1) return
     fileInput.files = e.dataTransfer.files
-    change()
+    change(fileInput.files)
   }
-  const change = () => {
-    files = fileInput.files
-    dispatch('change', files)
+  const preventDefault = e => {
+    e.preventDefault()
   }
 </script>
 
-<button class={className} {style} on:click={click} on:drop|preventDefault={drop} on:dragenter|preventDefault={() => {}} on:dragover|preventDefault={() => {}}>
-  <input type="file" bind:this={fileInput} style="display: none;" {multiple} {accept} on:change={change}>
+<button {...props} onclick={click} ondrop={drop} ondragenter={preventDefault} ondragover={preventDefault}>
+  <input type="file" bind:this={fileInput} style="display: none;" {multiple} {accept} onchange={() => { change(fileInput.files) }}>
   <slot></slot>
 </button>
-

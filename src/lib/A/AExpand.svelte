@@ -2,19 +2,17 @@
   slot: default
 -->
 <script>
-  export let show = false
-  export let className = ''
-  export let style = ''
-  export let axis = 'y'
-  export let duration = 300
+  let { show = false, axis = 'y', duration = 300, ...props } = $props()
 
   import { slide } from 'svelte/transition'
-  let slideConfig = {}
-  $: slideConfig = { axis }
+  let slideConfig = $state({})
+  $effect(() => {
+    slideConfig = { axis }
+  })
 </script>
 
 {#if show}
-  <div transition:slide={{ duration, ...slideConfig }} class={className} {style}>
+  <div transition:slide={{ duration, ...slideConfig }} {...props}>
     <slot></slot>
   </div>
 {/if}
