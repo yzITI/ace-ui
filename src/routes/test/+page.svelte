@@ -9,12 +9,12 @@
 <div style="display: flex; align-items: center; padding: 2rem; background: #fff;">
   <AButton style="margin: 1rem;" title="hi!" onclick={() => { console.log('hi!') }}>Toggle Modal</AButton>
   <AAttach show={showAttach} style="margin: 1rem;" className="a-left-top">
-    <AButton slot="target" className="a-round a-shadow" on:click={() => showAttach = !showAttach}>Toggle attach</AButton>
+    <AButton slot="target" class="a-round a-shadow" on:click={() => showAttach = !showAttach}>Toggle attach</AButton>
     <div slot="attach" style="background: gray; color: white; border-radius: 5px; margin: 0.25rem; padding: 0.125rem 0.25rem; font-size: 0.8rem;">
       attach!
     </div>
   </AAttach>
-  <AButton style="margin: 1rem;" className="a-border" color="#00f" background="#eef">border button</AButton>
+  <AButton style="margin: 1rem;" class="a-border" color="#00f" background="#eef">border button</AButton>
 </div>
 
 <div style="border: red 1px solid; height: 500px; width: 100%; position: relative;">

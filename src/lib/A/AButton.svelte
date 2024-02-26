@@ -1,17 +1,12 @@
 <!-- AButton
-  className: a-shadow, a-round, a-border
+  class: a-shadow, a-round, a-border
   slot: default
-  events: ALL
 -->
 <script>
-  export let className = ''
-  export let style = ''
-  export let title = ''
-  export let color = 'black'
-  export let background = '#eee'
+  let { color = 'black', background = '#eee', ...props } = $props()
 </script>
 
-<button on:* {title} style:color style:background style:border-color={color} class={className} {style}>
+<button style:color={color} style:background={background} {...props}>
   <slot></slot>
 </button>
 
