@@ -17,7 +17,7 @@
 </p>
 
 <h1 align="center">Ace UI</h1>
-<p align="center">A Progressive UI Library for Svelte</p>
+<p align="center">A Progressive UI Library for Svelte 5</p>
 
 ## Get Started
 
@@ -33,5 +33,5 @@ import { AIcon, AceButton } from 'ace.svelte'
 
 ## Peer Dependencies
 
-- `svelte@4.x`
+- `svelte@5.x`
 - `@mdi/js@7.x`: SVG paths for [Material Design Icons](https://pictogrammers.com/library/mdi/) with 7000+ icons!
