@@ -8,10 +8,10 @@
   import { fade, fly } from 'svelte/transition'
   let flyConfig = {}
   $effect(() => { // fly transition direction
-    if (props.class.match('a-left')) flyConfig = { x: '-100%' }
-    if (props.class.match('a-right')) flyConfig = { x: '100%' }
-    if (props.class.match('a-top')) flyConfig = { y: '-100%' }
-    if (props.class.match('a-bottom')) flyConfig = { y: '100%' }
+    if (props.class?.match('a-left')) flyConfig = { x: '-100%' }
+    if (props.class?.match('a-right')) flyConfig = { x: '100%' }
+    if (props.class?.match('a-top')) flyConfig = { y: '-100%' }
+    if (props.class?.match('a-bottom')) flyConfig = { y: '100%' }
   })
   function close () {
     if (!disable) show = false
