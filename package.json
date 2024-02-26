@@ -46,23 +46,20 @@
   ],
   "author": "yzITI",
   "license": "MIT",
-  "dependencies": {
-    "svelte-preprocess-delegate-events": "^0.4.2"
-  },
   "peerDependencies": {
     "@mdi/js": "7.x",
-    "svelte": "4.x"
+    "svelte": "5.x"
   },
   "devDependencies": {
-    "@mdi/js": "^7.3.67",
-    "@sveltejs/adapter-auto": "^2.1.1",
-    "@sveltejs/kit": "^1.27.6",
-    "@sveltejs/package": "^2.2.2",
-    "publint": "^0.2.5",
-    "svelte": "^4.2.3",
-    "svelte-preprocess-delegate-events": "^0.4.2",
+    "@mdi/js": "^7.4.47",
+    "@sveltejs/adapter-auto": "^3.1.1",
+    "@sveltejs/kit": "^2.5.2",
+    "@sveltejs/package": "^2.2.7",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "publint": "^0.2.7",
+    "svelte": "5.0.0-next.68",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0"
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4"
   }
 }
