@@ -1,5 +1,4 @@
-<!-- ACheckbox
--->
+<!-- ACheckbox -->
 <script>
   let { value = false, size = '1.5rem', activeColor = 'rgb(59 130 246)', inactiveColor = '#999', ...props } = $props()
 

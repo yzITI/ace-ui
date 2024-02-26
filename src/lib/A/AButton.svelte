@@ -3,10 +3,10 @@
   slot: default
 -->
 <script>
-  let { color = 'black', background = '#eee', ...props } = $props()
+  let { ...props } = $props()
 </script>
 
-<button style:color={color} style:background={background} {...props}>
+<button {...props}>
   <slot></slot>
 </button>
 

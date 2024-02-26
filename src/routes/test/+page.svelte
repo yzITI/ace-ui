@@ -4,17 +4,18 @@
   let showModal = $state(false)
   let showAttach = $state(false)
   let switchValue = $state(false)
+  let iconColor = $state('red')
 </script>
 
 <div style="display: flex; align-items: center; padding: 2rem; background: #fff;">
   <AButton style="margin: 1rem;" title="hi!" onclick={() => { showModal = !showModal }}>Toggle Modal</AButton>
   <AAttach show={showAttach} style="margin: 1rem;" class="a-left-top">
-    <AButton slot="target" class="a-round a-shadow" on:click={() => showAttach = !showAttach}>Toggle attach</AButton>
+    <AButton slot="target" class="a-round a-shadow" onclick={() => showAttach = !showAttach}>Toggle attach</AButton>
     <div slot="attach" style="background: gray; color: white; border-radius: 5px; margin: 0.25rem; padding: 0.125rem 0.25rem; font-size: 0.8rem;">
       attach!
     </div>
   </AAttach>
-  <AButton style="margin: 1rem;" class="a-border" color="#00f" background="#eef">border button</AButton>
+  <AButton class="a-border" style="color: blue; background: #eef; margin: 1rem;">border button</AButton>
 </div>
 
 <div style="border: red 1px solid; height: 500px; width: 100%; position: relative;">
@@ -33,9 +34,9 @@
   <ACheckbox bind:value={switchValue}></ACheckbox>
 </AExpand>
 
-<AButton>
+<AButton onclick={() => { iconColor = 'blue' }}>
   <AFlex>
-    <AIcon path={mdiAbTesting} size="1rem" color="red"></AIcon>
+    <AIcon path={mdiAbTesting} color={iconColor}></AIcon>
     <div>HAHAHAH</div>
   </AFlex>
 </AButton>

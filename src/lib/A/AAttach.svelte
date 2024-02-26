@@ -3,7 +3,7 @@
   slot: target, attach
 -->
 <script>
-  let { show = false, class? = 'a-below', axis = '', duration = 300, ...props } = $props()
+  let { show = false, axis = '', duration = 300, ...props } = $props()
 
   import { slide } from 'svelte/transition'
   let slideConfig = $state({})
