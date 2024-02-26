@@ -7,7 +7,7 @@
 <AFlex className="a-items-center a-justify-center a-col" style="min-height: 90vh;">
   <img src={logo} alt="logo" type="image/svg+xml">
   <h1>Ace UI</h1>
-  <p class="description">A Progressive UI Library for Svelte</p>
+  <p class="description">A Progressive UI Library for Svelte 5</p>
   <AFlex className="a-items-center a-justify-center a-wrap">
     <a href="/docs">
       <AButton style="padding: 0.7rem; width: 16rem; font-size: 1.7rem; font-weight: 600;" background="#3B82F6" color="white">Get Started</AButton>
