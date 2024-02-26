@@ -1,12 +1,7 @@
 <!-- ACheckbox
-  events: ALL
 -->
 <script>
-  export let value = false // binding
-  export let size = '1.5rem'
-  export let className = ''
-  export let activeColor = 'rgb(59 130 246)'
-  export let inactiveColor = '#999'
+  let { value = false, size = '1.5rem', activeColor = 'rgb(59 130 246)', inactiveColor = '#999', ...props } = $props()
 
   import AIcon from './AIcon.svelte'
   import { mdiCheckboxMarked, mdiCheckboxBlankOutline } from '@mdi/js'
@@ -16,7 +11,7 @@
   }
 </script>
 
-<div on:* class={'a-checkbox ' + className} on:click={toggle} on:keyup={toggle} role="checkbox" aria-checked={value} tabindex="0">
+<div class:a-checkbox={true} {...props} onclick={toggle} onkeyup={toggle} role="checkbox" aria-checked={value} tabindex="0">
   <div class="check" style:opacity={value ? 100 : 0}>
     <AIcon path={mdiCheckboxMarked} color={activeColor} {size} />
   </div>

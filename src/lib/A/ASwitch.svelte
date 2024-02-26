@@ -1,21 +1,15 @@
 <!-- ASwitch
-  events: ALL
 -->
 <script>
-  export let value = false // binding
-  export let size = '1.5rem'
-  export let className = '' // button class
-  export let style = '' // button style
-  export let activeColor = 'rgb(59 130 246)'
-  export let inactiveColor = '#999'
+  let { value = false, size = '1.5rem', activeColor = 'rgb(59 130 246)', inactiveColor = '#999', ...props } = $props()
 
   function toggle () {
     value = !value
   }
 </script>
 
-<div on:* class="a-switch-outer" style:width={`calc(2 * ${size})`} on:click={toggle} on:keyup={toggle} style:padding={`calc(${size} / 10)`} style:background={value ? activeColor : inactiveColor} role="checkbox" tabindex="0" aria-checked={value}>
-  <div style:left={value ? '50%' : '0%'} style:width={size} style:height={size} {style} class={'a-switch-inner ' + className}></div>
+<div class:a-switch-outer={true} style:width={`calc(2 * ${size})`} onclick={toggle} onkeyup={toggle} style:padding={`calc(${size} / 10)`} style:background={value ? activeColor : inactiveColor} role="checkbox" tabindex="0" aria-checked={value}>
+  <div style:left={value ? '50%' : '0%'} style:width={size} style:height={size} class:a-switch-inner={true} {...props}></div>
 </div>
 
 <style>

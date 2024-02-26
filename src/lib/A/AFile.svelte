@@ -3,17 +3,13 @@
   events: change
 -->
 <script>
-  export let className = ''
-  export let style = ''
-  export let multiple = false
-  export let accept = ''
-  export let files 
+  let { multiple = false, accept = '', files, ...props } = $props()
 
   import { createEventDispatcher } from 'svelte'
   
   const dispatch = createEventDispatcher()
 
-  let fileInput = null
+  let fileInput = $state({})
 
   const click = () => { fileInput?.click() }
   const drop = e => {
@@ -27,8 +23,7 @@
   }
 </script>
 
-<button class={className} {style} on:click={click} on:drop|preventDefault={drop} on:dragenter|preventDefault={() => {}} on:dragover|preventDefault={() => {}}>
+<button {...props} on:click={click} on:drop|preventDefault={drop} on:dragenter|preventDefault={() => {}} on:dragover|preventDefault={() => {}}>
   <input type="file" bind:this={fileInput} style="display: none;" {multiple} {accept} on:change={change}>
   <slot></slot>
 </button>
-

@@ -1,24 +1,22 @@
 <!-- AAttach
-  className: a-left-top a-left-center a-left-bottom a-right-top a-right-center a-right-bottom a-top-left a-top-center a-top-right a-bottom-left a-bottom-center a-bottom-right
+  class: a-left-top a-left-center a-left-bottom a-right-top a-right-center a-right-bottom a-top-left a-top-center a-top-right a-bottom-left a-bottom-center a-bottom-right
   slot: target, attach
 -->
 <script>
-  export let show = false
-  export let className = 'a-below'
-  export let style = ''
-  export let axis = ''
-  export let duration = 300
+  let { show = false, class? = 'a-below', axis = '', duration = 300, ...props } = $props()
 
   import { slide } from 'svelte/transition'
-  let slideConfig = {}
-  $: if (axis) slideConfig = { axis }
-  else { // auto direction
-    if (className.match('a-left') || className.match('a-right')) slideConfig = { axis: 'x' }
-    if (className.match('a-top') || className.match('a-bottom')) slideConfig = { axis: 'y' }
-  }
+  let slideConfig = $state({})
+  $effect(() => {
+    if (axis) slideConfig = { axis }
+    else { // auto direction
+      if (props.class?.match('a-left') || props.class?.match('a-right')) slideConfig = { axis: 'x' }
+      if (props.class?.match('a-top') || props.class?.match('a-bottom')) slideConfig = { axis: 'y' }
+    }
+  })
 </script>
 
-<div class={'a-attach-outer ' + className} {style}>
+<div class:a-attach-outer={true} {...props}>
   {#if show}
     <div transition:slide={{ duration, ...slideConfig }} class="a-attach-attach">
       <slot name="attach"></slot>
