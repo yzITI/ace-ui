@@ -1,6 +1,4 @@
-import { writable } from 'svelte/store'
-
-export default writable({
+export default $state({
   primary: '#3b82f6',
   info: '#0ea5e9',
   success: '#22c55e',
