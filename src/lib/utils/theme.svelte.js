@@ -1,4 +1,4 @@
-export default $state({
+const state = $state({
   primary: '#3b82f6',
   info: '#0ea5e9',
   success: '#22c55e',
@@ -6,3 +6,5 @@ export default $state({
   error: '#ef4444',
   default: '#6b7280'
 })
+
+export default state

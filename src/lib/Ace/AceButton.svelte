@@ -1,6 +1,6 @@
 <script>
   import AButton from '../A/AButton.svelte'
-  import theme from '../utils/theme.js'
+  import theme from '../utils/theme.svelte'
   let { text = 'AceButton', color = 'default', weight = 'bold', size = 'medium', ...props } = $props()
 
   let _color = 'white'
