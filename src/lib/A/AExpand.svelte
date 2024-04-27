@@ -1,8 +1,8 @@
 <!-- AExpand
-  slot: default
+  snippet: children
 -->
 <script>
-  let { show = false, axis = 'y', duration = 300, ...props } = $props()
+  let { show = $bindable(false), axis = 'y', duration = 300, children, ...props } = $props()
 
   import { slide } from 'svelte/transition'
   let slideConfig = $state({})
@@ -13,6 +13,6 @@
 
 {#if show}
   <div transition:slide={{ duration, ...slideConfig }} {...props}>
-    <slot></slot>
+    {@render children()}
   </div>
 {/if}

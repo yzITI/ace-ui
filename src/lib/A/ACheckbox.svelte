@@ -1,6 +1,6 @@
 <!-- ACheckbox -->
 <script>
-  let { value = false, size = '1.5rem', activeColor = 'rgb(59 130 246)', inactiveColor = '#999', ...props } = $props()
+  let { value = $bindable(false), size = '1.5rem', activeColor = 'rgb(59 130 246)', inactiveColor = '#999', ...props } = $props()
 
   import AIcon from './AIcon.svelte'
   import { mdiCheckboxMarked, mdiCheckboxBlankOutline } from '@mdi/js'

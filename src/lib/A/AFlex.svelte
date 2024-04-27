@@ -1,12 +1,13 @@
 <!-- AFlex
+  sippet: children,
   class: a-row a-col a-wrap a-justify-start a-justify-center a-justify-end a-justify-between a-justify-around a-items-start a-items-end a-items-center a-items-stretch
 -->
 <script>
-  let { ...props } = $props()
+  let { children, ...props } = $props()
 </script>
 
 <div {...props}>
-  <slot></slot>
+  {@render children()}
 </div>
 
 <style>

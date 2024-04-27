@@ -9,11 +9,15 @@
 
 <div style="display: flex; align-items: center; padding: 2rem; background: #fff;">
   <AButton style="margin: 1rem;" title="hi!" onclick={() => { showModal = !showModal }}>Toggle Modal</AButton>
-  <AAttach show={showAttach} style="margin: 1rem;" class="a-left-top">
-    <AButton slot="target" class="a-round a-shadow" onclick={() => showAttach = !showAttach}>Toggle attach</AButton>
-    <div slot="attach" style="background: gray; color: white; border-radius: 5px; margin: 0.25rem; padding: 0.125rem 0.25rem; font-size: 0.8rem;">
-      attach!
-    </div>
+  <AAttach show={showAttach} style="margin: 1rem;" class="a-top-center">
+    {#snippet target()}
+      <AButton class="a-round a-shadow" onclick={() => showAttach = !showAttach}>Toggle attach</AButton>
+    {/snippet}
+    {#snippet attach()}
+      <div style="background: gray; color: white; border-radius: 5px; margin: 0.25rem; padding: 0.125rem 0.25rem; font-size: 0.8rem;">
+        attach!
+      </div>
+    {/snippet}
   </AAttach>
   <AButton class="a-border" style="color: blue; background: #eef; margin: 1rem;">border button</AButton>
 </div>
