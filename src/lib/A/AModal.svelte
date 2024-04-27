@@ -1,9 +1,9 @@
 <!-- AModal
   class: a-absolute a-left a-right a-top a-bottom
-  slot: default
+  sippet: children
 -->
 <script>
-  let { show = false, disable = false, background = 'rgba(0, 0, 0, 0.6)', duration = 300, ...props } = $props()
+  let { show = $bindable(false), disable = false, background = 'rgba(0, 0, 0, 0.6)', duration = 300, children, ...props } = $props()
   import { cubicOut } from 'svelte/easing'
   import { fade, fly } from 'svelte/transition'
   let flyConfig = $state({})
@@ -20,9 +20,9 @@
 
 {#if show}
   <div class:a-modal-outer={true} {...props}>
-    <div transition:fade={{ duration, easing: cubicOut }} class:a-modal-bg={true} style:background={background} onclick={close} role="button" tabindex="0"/>
+    <button transition:fade={{ duration, easing: cubicOut }} class:a-modal-bg={true} style:background={background} onclick={close} tabindex="0"></button>
     <div transition:fly={{ duration, ...flyConfig }} class:a-modal-inner={true}>
-      <slot></slot>
+      {@render children()}
     </div>
   </div>
 {/if}

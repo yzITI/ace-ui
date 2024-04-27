@@ -1,9 +1,9 @@
 <!-- AFile
-  slot: default
+  snippet: children
   events: change
 -->
 <script>
-  let { multiple = false, accept = '', files, change, ...props } = $props()
+  let { multiple = false, accept = '', change, children, ...props } = $props()
 
   let fileInput = $state({})
 
@@ -21,5 +21,5 @@
 
 <button {...props} onclick={click} ondrop={drop} ondragenter={preventDefault} ondragover={preventDefault}>
   <input type="file" bind:this={fileInput} style="display: none;" {multiple} {accept} onchange={() => { change(fileInput.files) }}>
-  <slot></slot>
+  {@render children()}
 </button>

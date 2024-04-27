@@ -1,13 +1,13 @@
 <!-- AButton
   class: a-shadow, a-round, a-border
-  slot: default
+  snippet: children
 -->
 <script>
-  let { ...props } = $props()
+  let { children, ...props } = $props()
 </script>
 
 <button {...props}>
-  <slot></slot>
+  {@render children()}
 </button>
 
 <style>

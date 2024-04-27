@@ -1,9 +1,9 @@
 <!-- AAttach
   class: a-left-top a-left-center a-left-bottom a-right-top a-right-center a-right-bottom a-top-left a-top-center a-top-right a-bottom-left a-bottom-center a-bottom-right
-  slot: target, attach
+  snippet: target, attach
 -->
 <script>
-  let { show = false, axis = '', duration = 300, ...props } = $props()
+  let { show = $bindable(false), axis = '', duration = 300, target, attach, ...props } = $props()
 
   import { slide } from 'svelte/transition'
   let slideConfig = $state({})
@@ -19,11 +19,11 @@
 <div class:a-attach-outer={true} {...props}>
   {#if show}
     <div transition:slide={{ duration, ...slideConfig }} class="a-attach-attach">
-      <slot name="attach"></slot>
+      {@render attach()}
     </div>
   {/if}
   <div class="a-attach-target">
-    <slot name="target"></slot>
+    {@render target()}
   </div>
 </div>
 

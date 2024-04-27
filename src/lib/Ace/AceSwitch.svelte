@@ -1,5 +1,5 @@
 <script>
-  let { value, type, size, ...props } = $props()
+  let { value = $bindable(false), type, size, ...props } = $props()
 
   import ASwitch from '$lib/A/ASwitch.svelte'
   import theme from '$lib/utils/theme.svelte'
