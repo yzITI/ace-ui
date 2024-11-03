@@ -40,7 +40,7 @@
     justify-content: center;
     overflow: hidden;
   }
-  div.a-modal-bg {
+  button.a-modal-bg {
     position: absolute;
     top: 0;
     left: 0;
